@@ -4,7 +4,18 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  const lowerCase = str.toLowerCase();
+  if (lowerCase.length === 1) {
+    return true;
+  }
+  // removing spaces and punctuation from the string
+  const processedStr = lowerCase.replace(/[\W_]/g, "");
+
+  // comparing the processed string with its reverse
+  if (processedStr === processedStr.split("").reverse().join("")) {
+    return true;
+  }
+  return false;
 }
 
 module.exports = isPalindrome;
