@@ -27,4 +27,3 @@ function calculateTime(n) {
 calculateTime(100);
 calculateTime(100000);
 calculateTime(1000000000);
-calculateTime(100000000000000000000000000);
