@@ -5,7 +5,14 @@
 */
 
 function isAnagram(str1, str2) {
-
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  const lowerStr1 = str1.toLowerCase();
+  const lowerStr2 = str2.toLowerCase();
+  return (
+    lowerStr1.split("").sort().join("") === lowerStr2.split("").sort().join("")
+  );
 }
 
 module.exports = isAnagram;
